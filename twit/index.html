@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitter中文网 - Twitter中国官方下载入口与使用指南</title>
+    <meta name="description" content="Twitter中文网提供Twitter X官方下载、安全安装教程、最新版本更新资讯及跨平台使用指南。帮助用户快速了解Twitter中国区网络访问方式、客户端功能介绍及账号安全注意事项。">
+    <meta name="keywords" content="twitter中文网, Twitter下载, X官网, Twitter中国, Twitter教程, Twitter客户端">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1DA1F2;
+            --primary-hover: #0c85d0;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #0f1419;
+            --text-secondary: #536471;
+            --border-color: #eff3f4;
+            --footer-bg: #15202b;
+            --code-bg: #f6f8fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, var(--primary-color), #1a91da);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(29, 161, 242, 0.3);
+        }
+
+        .download-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .download-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+        }
+
+        .platform-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .platform-icon {
+            background: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-large {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* Features Grid */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Guide Section */
+        .guide-container {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-bottom: 80px;
+        }
+
+        .guide-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            gap: 30px;
+        }
+
+        .tab-btn {
+            padding: 15px 0;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-list li {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .step-number {
+            background-color: var(--code-bg);
+            color: var(--primary-color);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .step-text p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .note-box {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .faq-icon {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: #8899a6;
+            padding: 60px 20px 30px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            max-width: 300px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-col h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .download-card {
+                padding: 30px 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                Twitter<span>中文网</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#download" class="active">下载客户端</a>
+                <a href="#features">功能介绍</a>
+                <a href="#guide">使用指南</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#download" class="cta-button">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="download" class="hero">
+            <div class="hero-text">
+                <h1>连接世界，分享你的声音</h1>
+                <p>Twitter（X）是全球领先的社交媒体平台，提供实时信息流、即时通讯和多元化的内容社区。在Twitter中文网，您可以获取最新客户端版本，了解如何安全、便捷地使用Twitter。</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <a href="#" class="cta-button" style="padding: 12px 30px;">下载 Windows 版</a>
+                    <a href="#" class="cta-button" style="padding: 12px 30px; background-color: white; color: var(--text-main); border: 1px solid var(--border-color);">查看 Mac 版</a>
+                </div>
+            </div>
+            <div class="download-card">
+                <h2>Twitter X 客户端</h2>
+                <p>最新版本：v5.0.0 | 支持多平台同步</p>
+                <div class="platform-icons">
+                    <div class="platform-icon">W</div>
+                    <div class="platform-icon">M</div>
+                    <div class="platform-icon">A</div>
+                    <div class="platform-icon">L</div>
+                </div>
+                <a href="#" class="btn-large">获取官方安装包</a>
+                <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.8;">
+                    <p>✓ 绿色无毒，无广告插件</p>
+                    <p>✓ 自动更新，稳定流畅</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2 class="section-title">为什么选择 Twitter？</h2>
+            <div class="features">
+                <article class="feature-card">
+                    <div class="feature-icon">📰</div>
+                    <h3>实时资讯</h3>
+                    <p>第一时间获取突发新闻、体育赛事、科技动态和娱乐八卦，掌握全球热点。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>即时通讯</h3>
+                    <p>与朋友、偶像或行业专家直接对话，发送图片、视频和链接，沟通无界限。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🐦</div>
+                    <h3>多元社区</h3>
+                    <p>加入兴趣小组，参与话题讨论，无论是编程、设计还是生活分享，都有你的空间。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-container">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">新手安装与使用指南</h2>
+            <div class="guide-tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'pc')">电脑端安装</button>
+                <button class="tab-btn" onclick="openTab(event, 'phone')">手机端设置</button>
+                <button class="tab-btn" onclick="openTab(event, 'account')">账号注册</button>
+            </div>
+
+            <div id="pc" class="tab-content active">
+                <ul class="step-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h4>访问官网下载</h4>
+                            <p>在Twitter中文网下载专区，选择对应您操作系统的安装包（Windows 或 macOS）。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h4>运行安装程序</h4>
+                            <p>双击下载的安装文件，按照向导提示完成安装。安装过程中请确保关闭其他浏览器窗口。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h4>登录账号</h4>
+                            <p>启动客户端，输入您的用户名和密码即可进入。首次登录建议开启两步验证以增强安全。</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="note-box">
+                    <strong>注意：</strong> 安装包已内置安全检测，请勿下载来源不明的第三方修改版，以免导致账号信息泄露。
+                </div>
+            </div>
+
+            <div id="phone" class="tab-content">
+                <ul class="step-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h4>前往应用商店</h4>
+                            <p>在 Apple App Store 或各大安卓应用市场搜索 "Twitter" 或 "X"。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h4>获取官方版本</h4>
+                            <p>认准发布者为 "X Corp." 或 Twitter 官方标识，点击获取或安装。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h4>授权与登录</h4>
+                            <p>安装完成后打开应用，使用邮箱、手机号或第三方账号（如Google、Apple ID）登录。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="account" class="tab-content">
+                <ul class="step-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h4>注册新账号</h4>
+                            <p>点击注册按钮，填写有效的电子邮箱或手机号码，设置密码。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h4>完善资料</h4>
+                            <p>上传头像，设置昵称（用户名）和个人简介，选择您的兴趣领域。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h4>遵守社区规范</h4>
+                            <p>阅读并同意 Twitter 的服务条款和社区准则，文明发帖，维护良好的网络环境。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Twitter 和 X 是同一个应用吗？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    是的，Twitter 现已更名为 X。尽管品牌名称改变，但您的账号、好友列表和发布的内容都保持不变，您可以继续使用原有的登录方式。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    在中国如何访问 Twitter？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    由于网络环境限制，在中国大陆地区访问 Twitter 可能需要稳定的网络加速工具。建议使用官方客户端，并确保您的网络连接安全合规。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    如何修改 Twitter 的语言设置？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    进入客户端的"设置和隐私"菜单，选择"账号"，然后点击"语言"即可切换显示语言。目前支持多种语言，包括简体中文。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    账号被盗怎么办？
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    如果您怀疑账号被盗，请立即前往 Twitter 的登录帮助页面，通过注册的手机号或邮箱验证身份来重置密码，并开启两步验证功能。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>Twitter中文网</h4>
+                <p>致力于为用户提供最新、最安全的Twitter客户端下载及使用帮助。我们专注于平台资讯、功能科普与社区规范引导。</p>
+            </div>
+            <div class="footer-col">
+                <h5>快速链接</h5>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">服务条款</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>下载专区</h5>
+                <ul>
+                    <li><a href="#">Windows 下载</a></li>
+                    <li><a href="#">macOS 下载</a></li>
+                    <li><a href="#">iOS 版本</a></li>
+                    <li><a href="#">Android 版本</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>支持</h5>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">账号安全</a></li>
+                    <li><a href="#">社区准则</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023-2024 Twitter中文网. All rights reserved. 本站为非官方网站，仅供技术交流与资讯展示。</p>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Show current tab and add active class to button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
