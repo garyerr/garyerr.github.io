@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4948男生最贱小游戏-搞怪互动与趣味恶作剧合集</title>
+    <meta name="description" content="提供4948男生最贱小游戏合集，包含趣味搞怪恶作剧、互动剧情小游戏，适合男生解压娱乐，轻松应对社交尴尬时刻。">
+    <meta name="keywords" content="4948男生最贱小游戏,搞怪小游戏,恶作剧小游戏,男生解压游戏">
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* 分类标签 */
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-tag {
+            background: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .category-tag:hover, .category-tag.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        /* 游戏网格 */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #dfe4ea;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .game-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .play-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            border-top: 1px solid #f1f2f6;
+            padding-top: 15px;
+        }
+
+        .game-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            gap: 10px;
+        }
+
+        .play-btn-small {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .play-btn-small:hover {
+            background: var(--primary-color);
+        }
+
+        /* 专区板块 */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 5px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .feature-section {
+            background: white;
+            padding: 50px 0;
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .feature-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .feature-img {
+            background: #f1f2f6;
+            border-radius: var(--border-radius);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding-bottom: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: white;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: #fafafa;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            background: #fafafa;
+            color: var(--text-light);
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 20px 20px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* 页脚 */
+        footer {
+            background: var(--secondary-color);
+            color: #dfe4ea;
+            padding: 40px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #dfe4ea;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 广告位：顶部通栏 -->
+    <div style="width: 100%; height: 90px; background: #e1e1e1; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.9rem; margin-bottom: 20px;">
+        广告位：顶部通栏
+    </div>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>4948</span> 搞怪小游戏
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#hot">热门恶作剧</a></li>
+                    <li><a href="#new">最新更新</a></li>
+                    <li><a href="#category">分类浏览</a></li>
+                </ul>
+            </nav>
+            <button class="cta-btn" onclick="alert('即将跳转到游戏大厅...')">开始玩</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="container">
+                <h1>男生专属搞怪互动</h1>
+                <p>精选 4948 男生最贱小游戏合集，通过幽默的互动剧情、轻松的恶作剧模拟，释放压力，活跃气氛，是聚会、宿舍娱乐的必备神器。</p>
+                <div class="categories">
+                    <span class="category-tag active">全部</span>
+                    <span class="category-tag">宿舍恶作剧</span>
+                    <span class="category-tag">社交尴尬时刻</span>
+                    <span class="category-tag">情侣互动</span>
+                    <span class="category-tag">职场解压</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门推荐 -->
+        <section class="container" id="hot">
+            <h2 class="section-title">🔥 热门搞怪推荐</h2>
+            <div class="game-grid">
+                <!-- 游戏卡片 1 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/prank1/400/250" alt="室友大作战游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">室友大作战：床底惊魂</h3>
+                        <p class="card-desc">模拟宿舍生活，通过潜行和恶作剧道具，在不被发现的前提下制造惊喜与惊吓。</p>
+                        <div class="card-footer">
+                            <div class="game-meta">
+                                <span>🤪 趣味</span>
+                                <span>👥 2人+</span>
+                            </div>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：室友大作战...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 游戏卡片 2 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/prank2/400/250" alt="尴尬社交模拟器封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">社交尴尬模拟器</h3>
+                        <p class="card-desc">在公共场合做出令人窒息的操作，测试你的心理承受能力和尴尬指数。</p>
+                        <div class="card-footer">
+                            <div class="game-meta">
+                                <span>😅 搞笑</span>
+                                <span>📱 单机</span>
+                            </div>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：社交尴尬模拟器...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 游戏卡片 3 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/prank3/400/250" alt="恶作剧大师封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">恶作剧大师进阶版</h3>
+                        <p class="card-desc">从简单的恶作剧到复杂的心理战术，全方位提升你的恶作剧技巧。</p>
+                        <div class="card-footer">
+                            <div class="game-meta">
+                                <span>🧠 策略</span>
+                                <span>🚫 无毒</span>
+                            </div>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：恶作剧大师...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 游戏卡片 4 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/prank4/400/250" alt="情侣互坑游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">情侣互坑大比拼</h3>
+                        <p class="card-desc">情侣之间最真实的互动游戏，看看谁更会坑对方，输的人要接受惩罚。</p>
+                        <div class="card-footer">
+                            <div class="game-meta">
+                                <span>❤️ 情侣</span>
+                                <span>🎮 互动</span>
+                            </div>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：情侣互坑...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 特色介绍 -->
+        <section class="feature-section">
+            <div class="container feature-grid">
+                <div class="feature-img">
+                    <img src="https://picsum.photos/seed/setup/600/400" alt="游戏特色展示">
+                </div>
+                <div class="feature-text">
+                    <h2>为什么选择 4948 小游戏？</h2>
+                    <p>我们专注于为男生群体提供轻松、解压且富有创意的互动娱乐内容。无论是朋友聚会、宿舍夜聊，还是独自放松，这里都有适合你的选择。</p>
+                    <ul class="feature-list">
+                        <li>海量精选小游戏，无需下载，浏览器直接运行</li>
+                        <li>场景化恶作剧设计，真实还原生活细节</li>
+                        <li>无广告干扰，纯净的游戏体验</li>
+                        <li>支持手机与电脑双端，随时随地想玩就玩</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="container" id="new">
+            <h2 class="section-title">📝 最新更新</h2>
+            <div class="game-grid">
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/new1/400/250" alt="办公室摸鱼大作战">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">办公室摸鱼大作战</h3>
+                        <p class="card-desc">在老板眼皮底下偷偷玩游戏，测试你的眼力与手速。</p>
+                        <div class="card-footer">
+                            <span class="game-meta" style="margin-top:10px;">📅 昨天</span>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：办公室摸鱼...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="play-badge">点击开始</span>
+                        <img src="https://picsum.photos/seed/new2/400/250" alt="真心话大冒险挑战">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">真心话大冒险挑战</h3>
+                        <p class="card-desc">经典桌游数字化，随机抽取任务，让聚会更加火热。</p>
+                        <div class="card-footer">
+                            <span class="game-meta" style="margin-top:10px;">📅 3天前</span>
+                            <button class="play-btn-small" onclick="alert('正在加载游戏：真心话大冒险...')">立即玩</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="container faq-section">
+            <h2 class="section-title">❓ 常见问题</h2>
+            <div class="faq-item">
+                <div class="faq-question">这些游戏适合在公共场合玩吗？</div>
+                <div class="faq-answer">
+                    部分游戏（如社交尴尬模拟器）适合在朋友间私下娱乐。建议在确保不干扰他人且不涉及不雅行为的前提下进行。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">4948小游戏安全吗？</div>
+                <div class="faq-answer">
+                    是的，所有游戏均为纯前端运行，不涉及任何后台数据上传，不会窃取你的隐私信息，请放心使用。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何添加到收藏夹？</div>
+                <div class="faq-answer">
+                    点击浏览器地址栏右侧的星形图标即可将当前页面保存到收藏夹，方便下次直接打开。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>4948 小游戏</h4>
+                    <p style="font-size: 0.9rem; color: #a4b0be;">专注男生搞怪娱乐，打造最纯粹的互动游戏平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">热门排行</a></li>
+                        <li><a href="#">最新上线</a></li>
+                        <li><a href="#">游戏分类</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">用户反馈</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 4948男生最贱小游戏 版权所有. 本站内容仅供娱乐参考，请文明上网。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // 分类标签交互
+        document.querySelectorAll('.category-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
